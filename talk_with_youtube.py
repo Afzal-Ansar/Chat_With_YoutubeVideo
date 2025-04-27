@@ -33,7 +33,6 @@ llm = ChatGroq(api_key="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
 
 # Streamlit App Title
 st.title("🎥 Chat with a YouTube Video")
-st.image(r"C:\Users\99ash\Downloads\unnamed.jpg",width=300)
 
 # User input for YouTube URL
 yt_url = st.text_input("Enter YouTube video URL:")
