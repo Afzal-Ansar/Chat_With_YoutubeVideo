@@ -41,17 +41,17 @@ yt_url = st.text_input("Enter YouTube video URL:")
 # Function to Load and Process Video
 def load_video_data(url):
     try:
-        # Try loading English transcript first
+        
         loader = YoutubeLoader.from_youtube_url(
             url,
             add_video_info=False,
-            language=["en"],       # Try English first
-            translation="en"       # Allow translation if needed
+            language=["en"],       
+            translation="en"       
         )
         docs = loader.load()
     except Exception as e:
         st.warning("English subtitles not available. Trying Hindi subtitles with translation...")
-        # Try Hindi if English is not available
+        
         loader = YoutubeLoader.from_youtube_url(
             url,
             add_video_info=False,
